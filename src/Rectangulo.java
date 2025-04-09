@@ -27,14 +27,17 @@ public class Rectangulo {
 
     @Override
     public String toString() {
-        int ancho = 3;
-        int altura = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el ancho: ");
+        int ancho = sc.nextInt();
+        System.out.println("Introduce la altura: ");
+        int altura = sc.nextInt();
         String cuadrado = "";
 
-        for (int fila = 0; fila < ancho; fila++) {
+        for (int fila = 0; fila < altura; fila++) {
             String forma = "";
-            for (int columna = 0; columna < altura; columna++) {
-                if (fila == 0 || fila == ancho - 1 || columna == 0 || columna == altura - 1) {
+            for (int columna = 0; columna < ancho; columna++) {
+                if (fila == 0 || fila == altura - 1 || columna == 0 || columna == ancho - 1) {
                     forma += "*";
                 } else {
                     forma += " ";
